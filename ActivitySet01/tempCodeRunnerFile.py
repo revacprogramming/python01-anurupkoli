@@ -1,5 +1,9 @@
-f lines.startswith("From"):
-        #     line = lines.split()
-        #     for word in line[1]:
-        #         dict = dict.get(word)
-
+with open("romeo.txt") as f :
+#     fh = f.read()
+#     fh = fh.split()
+#     list = []
+#     for word in fh :
+#         if word not in list :
+#             list.append(word)
+# list.sort()
+# print(list)
