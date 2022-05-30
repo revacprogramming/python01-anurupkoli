@@ -1,9 +1,9 @@
 # filename = "dataset/mbox-short.txt"
 file_name = input("Enter the file name: ")
 l = []
-with open(file_name) as f :
-    for line in f :
-        if not line.startswith("X-DSPAM-Confidence:") :
+with open(file_name) as f:
+    for line in f:
+        if not line.startswith("X-DSPAM-Confidence:"):
             continue
         # print(line)
         posi = line.find(":")
@@ -16,7 +16,7 @@ total = 0
 # print(l)
 no = len(l)
 # print(no)
-for i in l :
+for i in l:
     total += i
 avg = total/no
-print("Average spam confidence:",avg)
+print("Average spam confidence:", avg)
