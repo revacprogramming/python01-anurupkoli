@@ -7,7 +7,7 @@ with open("dataset/mbox-short.txt") as f :
         # print(lines)
         if lines.startswith("From"):
             line = lines.split()
-            # print(line)
+            print(line)
             dict[line[1]] = dict.get(line[1], 0) + 1
 
 # print(dict)
