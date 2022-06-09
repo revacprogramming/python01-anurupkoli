@@ -1,9 +1,13 @@
-with open("romeo.txt") as f :
-#     fh = f.read()
-#     fh = fh.split()
-#     list = []
-#     for word in fh :
-#         if word not in list :
-#             list.append(word)
-# list.sort()
-# print(list)
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = "GET  http://data.pr4e.org/intro-short.txt http/1.0\n\n".encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(1000)
+    if (len(data) < 1):
+        break
+    print(data.decode())
+mysock.close()
